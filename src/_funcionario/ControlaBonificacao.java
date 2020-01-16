@@ -1,3 +1,5 @@
+package _funcionario;
+
 public class ControlaBonificacao {
     private double soma;
 

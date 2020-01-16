@@ -1,3 +1,5 @@
+package _funcionario;
+
 public class TesteGerente {
     public static void main(String[] args) {
         Gerente mateus = new Gerente();

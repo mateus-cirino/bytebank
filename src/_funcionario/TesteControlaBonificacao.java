@@ -1,3 +1,5 @@
+package _funcionario;
+
 public class TesteControlaBonificacao {
     public static void main(String[] args) {
         ControlaBonificacao controle = new ControlaBonificacao();
