@@ -1,6 +1,6 @@
 package _funcionario;
 
-public class Funcionario {
+public abstract class Funcionario { //classes abstratas servem para herança e quando  nao queremos que exista um objeto desta classe
     private String nome;
     private String cpf;
     private double salario; //publico para (somente) os filhos
