@@ -6,7 +6,7 @@ public class TesteGerente {
         mateus.setNome("Mateus");
         mateus.setCpf("0000000");
         mateus.setSalario(100);
-        mateus.setSenha(0);
-        System.out.println(mateus.autentica(1));
+/*        mateus.setSenha(0);
+        System.out.println(mateus.autentica(1));*/
     }
 }
