@@ -17,9 +17,7 @@ public abstract class Conta {
         System.out.println("Estou criando uma conta " + this.numero);
     }
 
-    public void deposita(double valor) {
-        this.saldo = this.saldo + valor;
-    }
+    public abstract void deposita(double valor);
 
     public boolean saca(double valor) {
         if(this.saldo >= valor) {
