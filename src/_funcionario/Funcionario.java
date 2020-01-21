@@ -5,9 +5,7 @@ public abstract class Funcionario { //classes abstratas servem para herança e q
     private String cpf;
     private double salario; //publico para (somente) os filhos
 
-    public double getBonificacao () {
-        return this.salario * 0.1;
-    }
+    public abstract double getBonificacao (); //metodos abstratos sao metodos sem comportamento na classe mae, porem obriga os filhos a implementarem um comportamento
 
     public String getNome() {
         return nome;
