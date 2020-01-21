@@ -2,7 +2,7 @@ package _conta;
 
 public abstract class Conta {
 
-    private double saldo;
+    protected double saldo; //visivel para os filhos (dentro do mesmo pacote)
     private int agencia;
     private int numero;
     private Cliente titular;
