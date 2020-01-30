@@ -1,4 +1,5 @@
-package _conta;
+package br.com.bytebank.banco.teste;
+import br.com.bytebank.banco.modelo.conta.*;
 
 public class TesteException {
     public static void main(String[] args) {

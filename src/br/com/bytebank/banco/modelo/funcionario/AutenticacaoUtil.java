@@ -1,4 +1,4 @@
-package _funcionario;
+package br.com.bytebank.banco.modelo.funcionario;
 
 public class AutenticacaoUtil {
     private int senha;

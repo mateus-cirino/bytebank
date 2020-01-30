@@ -1,4 +1,4 @@
-package _funcionario;
+package br.com.bytebank.banco.modelo.funcionario;
 
 public abstract class Funcionario { //classes abstratas servem para herança e quando  nao queremos que exista um objeto desta classe
     private String nome;

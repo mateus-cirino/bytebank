@@ -1,4 +1,4 @@
-package _funcionario;
+package br.com.bytebank.banco.modelo.funcionario;
 
 public class Gerente extends Funcionario implements Autenticavel {
     private AutenticacaoUtil util;

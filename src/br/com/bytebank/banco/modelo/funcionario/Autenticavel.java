@@ -1,4 +1,4 @@
-package _funcionario;
+package br.com.bytebank.banco.modelo.funcionario;
 
 public abstract interface Autenticavel { //interfaces so possuem metodos abstratos
                                          //tambem sao vistas como contratos, ou seja, caso alguma classe implemente esta interface

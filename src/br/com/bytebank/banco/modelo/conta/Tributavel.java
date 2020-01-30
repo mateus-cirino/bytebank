@@ -1,4 +1,4 @@
-package _conta;
+package br.com.bytebank.banco.modelo.conta;
 
 public interface Tributavel {
     public double getImposto();
