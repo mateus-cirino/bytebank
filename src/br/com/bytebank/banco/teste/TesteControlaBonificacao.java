@@ -1,5 +1,7 @@
 package br.com.bytebank.banco.teste;
-import br.com.bytebank.banco.modelo.funcionario.*;
+
+import br.com.bytebank.banco.modelo.funcionario.ControlaBonificacao;
+import br.com.bytebank.banco.modelo.funcionario.Gerente;
 
 public class TesteControlaBonificacao {
     public static void main(String[] args) {
