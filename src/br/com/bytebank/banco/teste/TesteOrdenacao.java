@@ -41,9 +41,7 @@ public class TesteOrdenacao {
             System.out.println(conta.getTitular().getNome());
         }
 
-        ComparadorContaTitular comparadorContaTitular = new ComparadorContaTitular();
-
-        lista_contas.sort(comparadorContaTitular);
+        lista_contas.sort(new ComparadorContaTitular());
 
         System.out.println("--------------------------------");
 
