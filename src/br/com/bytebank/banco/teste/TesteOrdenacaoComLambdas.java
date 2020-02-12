@@ -9,7 +9,7 @@ import br.com.bytebank.banco.modelo.conta.Cliente;
 import br.com.bytebank.banco.modelo.conta.Conta;
 import br.com.bytebank.banco.modelo.conta.ContaCorrente;
 
-class TesteOrdenacaoCollections {
+class TesteOrdenacaoComLambdas {
     public static void main(String[] args) {
         Conta conta1 = new ContaCorrente(1,1);
         Cliente cli1 = new Cliente();
