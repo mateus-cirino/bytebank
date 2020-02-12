@@ -7,6 +7,9 @@ import java.io.InputStreamReader;
 
 class TesteLeituraArquivo {
     public static void main(String[] args) throws IOException{
+        //inputStream -> leitura de bytes
+        //Reader -> leitura de caracteres
+
         FileInputStream fis = new FileInputStream("lorem.txt");
         InputStreamReader isr = new InputStreamReader(fis);
         BufferedReader bis = new BufferedReader(isr);
