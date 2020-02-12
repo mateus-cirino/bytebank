@@ -12,5 +12,7 @@ class TesteLeituraArquivo {
         BufferedReader bis = new BufferedReader(isr);
 
         System.out.println(bis.readLine());
+
+        bis.close();
     }
 }
