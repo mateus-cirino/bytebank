@@ -23,6 +23,7 @@ class TesteLeituraArquivo {
         OutputStreamWriter osw = new OutputStreamWriter(fos);
         BufferedWriter bw = new BufferedWriter(osw);
 
+        //desta forma nao coloca a quebra de linhas
         bis.lines().forEach((str) -> {
             try {
                 bw.write(str);
@@ -30,6 +31,7 @@ class TesteLeituraArquivo {
                 e.printStackTrace();
             }
         });
+        
 
         //fechando o arquivo de leitura
         bis.close();
