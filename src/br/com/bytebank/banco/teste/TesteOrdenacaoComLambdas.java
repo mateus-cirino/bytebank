@@ -43,7 +43,7 @@ class TesteOrdenacaoComLambdas {
         );
 
         lista_contas.sort(
-            (c1, c2) -> c1.getTitular().getNome().compareTo(c2.getTitular().getNome())
+                Comparator.comparing(c -> c.getTitular().getNome())
         );
 
         System.out.println("--------------------------------");
