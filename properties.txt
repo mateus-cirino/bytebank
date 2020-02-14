@@ -1,0 +1,5 @@
+#arquivo de configuração
+#Fri Feb 14 15:47:34 BRT 2020
+senha=password
+login=mateus
+porta=22
