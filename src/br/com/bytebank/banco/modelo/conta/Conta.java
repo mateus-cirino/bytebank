@@ -11,7 +11,11 @@ public abstract class Conta extends Object implements Comparable<Conta>, Seriali
     private Cliente titular;
     private static int total = 0;
 
-    public Conta(int agencia, int numero){
+    public Conta(Integer agencia, Integer numero){
+        if(agencia.equals(null) || numero.equals(null)) {
+            throw new NullPointerException("Nao se pode iniciar" +
+                    "uma conta com valores nulos");
+        }
         Conta.total++;
         System.out.println("O total de contas é " + Conta.total);
         this.agencia = agencia;
