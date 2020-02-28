@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.modelo.conta;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public abstract class Conta extends Object implements Comparable<Conta>, Serializable {
     private static final long serialVersionUID = 1L;
@@ -75,6 +76,11 @@ public abstract class Conta extends Object implements Comparable<Conta>, Seriali
 
     public static int getTotal(){
         return Conta.total;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(saldo, agencia, numero, titular);
     }
 
     @Override
