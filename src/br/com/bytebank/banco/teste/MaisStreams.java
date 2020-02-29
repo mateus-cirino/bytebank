@@ -5,6 +5,7 @@ import br.com.bytebank.banco.modelo.conta.Cliente;
 import br.com.bytebank.banco.modelo.conta.Conta;
 import br.com.bytebank.banco.modelo.conta.ContaCorrente;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -27,6 +28,10 @@ public class MaisStreams {
         c1.deposita(2000.0);
         c1.deposita(500.0);
 
+        c2.deposita(1000);
+
+        c3.deposita(800);
+
         banco.adicionaConta(c1);
         banco.adicionaConta(c2);
         banco.adicionaConta(c3);
@@ -41,5 +46,9 @@ public class MaisStreams {
         banco.todasContas().stream()
                 .findAny()
                 .ifPresent(System.out::println);
+
+        List<Conta> listaContas = banco.todasContas().stream()
+                .filter(c -> c.getSaldo() > 1000)
+                .collect(Collectors.toList());
     }
 }
