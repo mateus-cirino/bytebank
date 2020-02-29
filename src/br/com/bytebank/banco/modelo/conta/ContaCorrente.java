@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class ContaCorrente extends Conta implements Tributavel {
 
+    public ContaCorrente (int agencia, int numero, Cliente cliente) {
+        super(agencia, numero, cliente);
+    }
+
     public ContaCorrente (int agencia, int numero) {
         super(agencia, numero);
     }

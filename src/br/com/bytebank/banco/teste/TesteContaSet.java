@@ -22,7 +22,7 @@ public class TesteContaSet {
         contas.add(c5);
 
         Conta novaC1 = new ContaCorrente(1, 2);
-
+        
         System.out.println(contas.contains(novaC1));
     }
 }
