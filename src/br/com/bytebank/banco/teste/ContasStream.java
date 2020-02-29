@@ -5,6 +5,8 @@ import br.com.bytebank.banco.modelo.conta.Cliente;
 import br.com.bytebank.banco.modelo.conta.Conta;
 import br.com.bytebank.banco.modelo.conta.ContaCorrente;
 
+import java.util.stream.Stream;
+
 public class ContasStream {
     public static void main(String[] args) {
         Banco banco = new Banco("bytebank");
@@ -22,7 +24,6 @@ public class ContasStream {
         Conta c3 = new ContaCorrente(3, 4, maria);
 
         c1.deposita(2000.0);
-        c2.deposita(6000.0);
         c1.deposita(500.0);
 
         banco.adicionaConta(c1);
@@ -33,6 +34,7 @@ public class ContasStream {
         Cliente mateus2 = new Cliente("mateus gente boa", "21308080",
                 "desenvolvedor");
         Conta c4 = new ContaCorrente(10, 23, mateus2);
+        c4.deposita(6000.0);
         banco.adicionaConta(c4);
 
         System.out.println("----------------------------------");
@@ -49,5 +51,32 @@ public class ContasStream {
                 .sum();
 
         System.out.println(sum);
+
+        System.out.println("----------------------------------");
+
+        Stream<Cliente> clientesDesenvolvedores = banco.todasContas().stream()
+                .filter(conta -> conta.getTitular().getProfissao().equals("desenvolvedor"))
+                .map(Conta::getTitular)
+                .filter(cliente -> cliente.getNome().contains("mateus"));
+
+        Double sumClientesDesenvolvedores = clientesDesenvolvedores
+                .map(banco::contaCliente)
+                .mapToDouble(Conta::getSaldo)
+                .sum();
+
+        System.out.println(sumClientesDesenvolvedores);
+
+        System.out.println("----------------------------------");
+
+        Double sumClientesDesenvolvedoresEmUmaUnicaLinha = banco.todasContas().stream()
+                .filter(conta -> conta.getTitular().getProfissao().equals("desenvolvedor"))
+                .map(Conta::getTitular)
+                .filter(cliente -> cliente.getNome().contains("mateus"))
+                .map(banco::contaCliente)
+                .mapToDouble(Conta::getSaldo)
+                .sum();
+
+        System.out.println(sumClientesDesenvolvedoresEmUmaUnicaLinha);
+
     }
 }
