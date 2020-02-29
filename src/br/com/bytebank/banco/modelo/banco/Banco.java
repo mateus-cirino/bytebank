@@ -31,4 +31,8 @@ public class Banco {
         }
         return this.contaClienteMap.get(conta);
     }
+
+    public Collection<Conta> todasContas() {
+        return Collections.unmodifiableCollection(this.conjuntoContas);
+    }
 }
